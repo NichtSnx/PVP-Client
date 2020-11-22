@@ -26,7 +26,7 @@ public class DiscordRP {
 			}
 		}).build();
 		
-		DiscordRPC.discordInitialize("743050073604358175", handlers, true);
+		DiscordRPC.discordInitialize("EURE DISCORD APPLICATION ID", handlers, true);
 		
 		new Thread("RPC Callback") {
 			public void run() {
@@ -44,6 +44,7 @@ public class DiscordRP {
 	
 	public void update(String linefirst, String linesecond) {
 		DiscordRichPresence.Builder b = new DiscordRichPresence.Builder(linesecond);
+		//Hier eure "icon" namen von der Discord Developersit eintragen
 		b.setBigImage("logo", EXPOSE.name + " " + EXPOSE.version + " " + "by " + EXPOSE.authors);
 		b.setSmallImage("mc-logo", "in Minecraft 1.8.8");
 		b.setDetails(linefirst);
